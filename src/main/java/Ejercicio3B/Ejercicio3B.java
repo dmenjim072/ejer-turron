@@ -29,6 +29,8 @@ public class Ejercicio3B {
         
         double materiaPrima = 0;
         
+        String resultado;
+        
         // Entradas con JOption (codigo del dulce y precio materia prima)
         String codProducto = JOptionPane.showInputDialog("Introduce el codigo: \n"
                 + "M1 (mantecados de limon)\n"
@@ -57,81 +59,101 @@ public class Ejercicio3B {
             case "M1":
                 // Proceso unitario coste produccion y precio venta de M1
                 double costeProdM1 = MANO_OBRA_M1_T1 + materiaPrima;
-                JOptionPane.showConfirmDialog(null, "El coste de "
-                        + "produccion unitario es: " + costeProdM1 + "€");
-                
+                                
                 double precioVentaM1 = costeProdM1 + (BENEFICIO_M1_M2_P1 * costeProdM1);
-                JOptionPane.showConfirmDialog(null, "El precio de "
-                        + "venta unitario es: " + precioVentaM1 + "€");
-                
+                                
                 double m1Necesarios = BENEFICIO_VENTAS / precioVentaM1;
-                JOptionPane.showConfirmDialog(null, 
-                        "La cantidad de mantecados de limon necesarios para llegar "
-                                + "a 2500€ son" + m1Necesarios);
+                
+                // Agrupamos los resultados en un textblock
+                resultado = 
+                        """
+                        Coste de produccion unitario: %.2f
+                        Precio de venta unitario: %.2f
+                        Cantidad necesaria para llegar a 2500€: %.2f
+                        """.formatted(costeProdM1,precioVentaM1,m1Necesarios);
+                
+                // Mostramos el resultado
+                JOptionPane.showConfirmDialog(null, resultado);
                 break;
                 
             case "M2":
                  // Proceso unitario coste produccion y precio venta de M2
                 double costeProdM2 = MANO_OBRA_M2_T2_P1 + materiaPrima;
-                JOptionPane.showConfirmDialog(null, "El coste de "
-                        + "produccion unitario es: " + costeProdM2 + "€");
-                
+                                
                 double precioVentaM2 = costeProdM2 + (BENEFICIO_M1_M2_P1 * costeProdM2);
-                JOptionPane.showConfirmDialog(null, "El precio de "
-                        + "venta unitario es: " + precioVentaM2 + "€");
-                
+                                
                 double m2Necesarios = BENEFICIO_VENTAS / precioVentaM2;
-                JOptionPane.showConfirmDialog(null, 
-                        "La cantidad de mazapanes necesarios para llegar "
-                                + "a 2500€ son" + m2Necesarios);
+                                
+                // Agrupamos los resultados en un textblock
+                resultado = 
+                        """
+                        Coste de produccion unitario: %.2f
+                        Precio de venta unitario: %.2f
+                        Cantidad necesaria para llegar a 2500€: %.2f
+                        """.formatted(costeProdM2,precioVentaM2,m2Necesarios);
+                
+                // Mostramos el resultado
+                JOptionPane.showConfirmDialog(null, resultado);
                 break;
                 
             case "P1":
                  // Proceso unitario coste produccion y precio venta de P1
                 double costeProdP1 = MANO_OBRA_M2_T2_P1 + materiaPrima;
-                JOptionPane.showConfirmDialog(null, "El coste de "
-                        + "produccion unitario es: " + costeProdP1 + "€");
-                
+                                
                 double precioVentaP1 = costeProdP1 + (BENEFICIO_M1_M2_P1 * costeProdP1);
-                JOptionPane.showConfirmDialog(null, "El precio de "
-                        + "venta unitario es: " + precioVentaP1 + "€");
-                
+                                
                 double p1Necesarios = BENEFICIO_VENTAS / precioVentaP1;
-                JOptionPane.showConfirmDialog(null, 
-                        "La cantidad de polvorones necesarios para llegar "
-                                + "a 2500€ son" + p1Necesarios);
+                
+                // Agrupamos los resultados en un textblock
+                resultado = 
+                        """
+                        Coste de produccion unitario: %.2f
+                        Precio de venta unitario: %.2f
+                        Cantidad necesaria para llegar a 2500€: %.2f
+                        """.formatted(costeProdP1,precioVentaP1,p1Necesarios);
+                
+                // Mostramos el resultado
+                JOptionPane.showConfirmDialog(null, resultado);
                 break;
                 
             case "T1":
                  // Proceso unitario coste produccion y precio venta de T1
                 double costeProdT1 = MANO_OBRA_M1_T1 + materiaPrima;
-                JOptionPane.showConfirmDialog(null, "El coste de "
-                        + "produccion unitario es: " + costeProdT1 + "€");
-                
+                                
                 double precioVentaT1 = costeProdT1 + (BENEFICIO_T1_T2 * costeProdT1);
-                JOptionPane.showConfirmDialog(null, "El precio de "
-                        + "venta unitario es: " + precioVentaT1 + "€");
-                
+                               
                 double t1Necesarios = BENEFICIO_VENTAS / precioVentaT1;
-                JOptionPane.showConfirmDialog(null, 
-                        "La cantidad de turrones de chocolate necesarios para "
-                                + "llegar a 2500€ son" + t1Necesarios);
+                               
+                // Agrupamos los resultados en un textblock
+                resultado = 
+                        """
+                        Coste de produccion unitario: %.2f
+                        Precio de venta unitario: %.2f
+                        Cantidad necesaria para llegar a 2500€: %.2f
+                        """.formatted(costeProdT1,precioVentaT1,t1Necesarios);
+                
+                // Mostramos el resultado
+                JOptionPane.showConfirmDialog(null, resultado);
                 break;
                 
             case "T2":
                  // Proceso unitario coste produccion y precio venta de T2
                 double costeProdT2 = MANO_OBRA_M2_T2_P1 + materiaPrima;
-                JOptionPane.showConfirmDialog(null, "El coste de "
-                        + "produccion unitario es: " + costeProdT2 + "€");
-                
+                               
                 double precioVentaT2 = costeProdT2 + (BENEFICIO_T1_T2 * costeProdT2);
-                JOptionPane.showConfirmDialog(null, "El precio de "
-                        + "venta unitario es: " + precioVentaT2 + "€");
-                
+                               
                 double t2Necesarios = BENEFICIO_VENTAS / precioVentaT2;
-                JOptionPane.showConfirmDialog(null, 
-                        "La cantidad de turrones clasicos necesarios para llegar "
-                                + "a 2500€ son" + t2Necesarios);
+                
+                // Agrupamos los resultados en un textblock
+                resultado = 
+                        """
+                        Coste de produccion unitario: %.2f
+                        Precio de venta unitario: %.2f
+                        Cantidad necesaria para llegar a 2500€: %.2f
+                        """.formatted(costeProdT2,precioVentaT2,t2Necesarios);
+                
+                // Mostramos el resultado
+                JOptionPane.showConfirmDialog(null, resultado);
                 break;            
         }    
             // En caso de que se escriba mal el precio de la materia    
